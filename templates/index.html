@@ -7,15 +7,22 @@
     <link rel="stylesheet" type="text/css" href="../static/style.css">
     <title>{{ title }}</title>
 </head>
-    <h1>Orders</h1>
-    <ul id="Orders">
+    <h1 id="head1">Lesson Orders</h1> 
+
+<body>
+    <p id="all">All Orders</p>
+    <ul id="orders">
         {% for order in orders %}
         <li>
-            <a href="http://localhost:4999/orders/{{loop.index0}}"><p>{{ order.name }} - {{ order.order_date }} - {{ order.quantity}} - {{ order.description }}</p></a>
+        <a href="http://localhost:4999/orders/{{loop.index0}}">
+        <p> Name: {{ order.name }} <br> Date: {{ order.order_date }} </p></a>
         </li>
         {% endfor %}
     </ul>
-<body>
-    
+    <footer>
+        <ul>
+            <li></li>
+        </ul>
+    </footer>
 </body>
 </html>
